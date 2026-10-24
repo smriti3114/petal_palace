@@ -1,0 +1,214 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Petal Palace{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+
+    <!-- ✅ ADDED GOOGLE FONTS (NEW) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- ✅ UPDATED STYLES -->
+    <style>
+        /* ===== GLOBAL (UPDATED) ===== */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffafa;
+        }
+
+        /* ===== NAVBAR (COMPLETELY UPDATED) ===== */
+        .navbar {
+            background: #ffffff !important;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #333 !important;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        /* underline hover effect */
+        .navbar-nav .nav-link::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #b11226;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* icons */
+        .navbar .bi {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .navbar .bi:hover {
+            color: #b11226;
+        }
+
+
+
+        /* remove old hover */
+        .navbar-nav .nav-link:hover {
+            background: none !important;
+            transform: none !important;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1b1b1b;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        footer a:hover {
+            color: #b11226;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ UPDATED NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand">
+                PETAL PALACE
+            </a>
+
+            <!-- TOGGLER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- CENTER NAV -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shop' %}">Shop Flowers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ms-auto">
+
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signout' %}"> <i class="bi-person-fill"></i>Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}"> <i class="bi-person-fill"></i></a>
+                    </li>
+                    {% endif %}
+
+                    <li class="nav-item"><a href="{% url 'cart' %}" class="text-dark text-decoration-none">
+                            <i class="bi bi-bag"></i> Cart</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success text-center">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <!-- ✅ CONTENT (UPDATED: removed margin) -->
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-5 mt-5" style="background: #000810;">
+        <div class="container text-center">
+            <h5 class="mb-3">Follow Us</h5>
+            <div class="mb-3">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919798472720" target="_blank" rel="noopener noreferrer" class="mx-2 fs-4">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <!-- Gmail / Email -->
+                <a href="https://mail.google.com/mail/?view=cm&to=smritipsingh01@gmail.com" target="_blank"
+                    class="mx-2 fs-4">
+                    <i class="bi bi-envelope"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/smritisingh3114" target="_blank" rel="noopener noreferrer"
+                    class="mx-2 fs-4">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <!-- Facebook (optional, replace URL if you have) -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="mx-2 fs-4">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <!-- Twitter (optional, replace URL if you have) -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="mx-2 fs-4">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+            <p>© 2026 Petal Palace | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        setTimeout(function () {
+            let alert = document.querySelector('.alert');
+            if (alert) {
+                alert.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>

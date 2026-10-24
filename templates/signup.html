@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login | Petal Palace{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+<br>
+<!-- SIGNUP SECTION -->
+<section class="signup-section">
+    <div class="signup-wrapper">
+
+        <div class="signup-card">
+
+            <h2 class="signup-title">Create Account</h2>
+            <p class="signup-sub">Join Petal Palace 🌸</p>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-outline-primary">Signup</button>
+
+                <p class="login-text">
+                    Already have an account?
+                    <a href="{% url 'login' %}">Login</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

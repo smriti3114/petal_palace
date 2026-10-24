@@ -1,0 +1,135 @@
+/* BACKGROUND */
+.cart-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+}
+
+/* TITLE */
+.cart-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #880e4f;
+}
+
+/* LAYOUT */
+.cart-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+/* CART ITEMS */
+.cart-items {
+    flex: 2;
+}
+
+/* ITEM CARD */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.cart-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+/* DETAILS */
+.item-details h5 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.item-details p {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* QUANTITY */
+.qty-box input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.update-btn {
+    background: #e2b3d8;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* TOTAL */
+.item-total {
+    font-weight: bold;
+}
+
+/* DELETE */
+.delete-btn {
+    align-items: end;
+    background: transparent;
+    border: none;
+    background-color: #e2b3d8;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+
+
+/* SUMMARY */
+.cart-summary {
+    flex: 1;
+    background: rgb(84, 73, 73);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.cart-summary textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+.checkout-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background: #ad1457;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cart-wrapper {
+        flex-direction: column;
+    }
+}

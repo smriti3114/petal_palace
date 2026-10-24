@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Petal Palace{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-card">
+
+            <div class="row align-items-center">
+
+                <!-- LEFT -->
+                <div class="col-md-6 p-5">
+
+                    
+
+                    <h1 class="hero-title">
+                        <span class="red">PETAL PALACE</span> <br>
+                        <span class="light">Where every Bloom tells a story</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Surprise yourself or someone special with beautiful blooms, 
+                        carefully selected and delivered at their freshest—because every day deserves a little happiness.
+                    </p>
+
+                    <a href="{% url 'shop' %}" class="hero-btn">Shop Now</a>
+
+                    <div class="hero-features">
+
+                       <div class="feature-item">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>60-day money-back guarantee</span>
+                       </div>
+
+                       <div class="feature-item">
+                             <i class="bi bi-truck"></i>
+                             <span>Free shipping on orders over ₹499</span>
+                       </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-md-6 position-relative text-center">
+
+                    <div class="image-box">
+                        <img src="{% static 'images/rose.jpg' %}" class="hero-img-new">
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="highlight-strip">
+
+    <div class="container">
+
+        <h4 class="highlight-title text-center mb-4">
+            Why Choose Us
+        </h4>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-3">
+                <div class="highlight-card">
+                    <i class="bi bi-flower1"></i>
+                    <p>Fresh flowers sourced daily</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="highlight-card">
+                     <i class="bi bi-truck"></i>
+                    <p>Same-day delivery available</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="highlight-card">
+                    <i class="bi bi-gift"></i>
+                    <p>Perfect for every occasion</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="highlight-card">
+                     <i class="bi bi-credit-card"></i>
+                    <p>Secure & easy payments</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="category-section">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="section-title">Shop by Categories</h3>
+            <a href="#" class="explore-btn">Explore →</a>
+        </div>
+
+        <!-- SCROLL CONTAINER -->
+        <div class="scroll-container">
+
+            <!-- CARD 1 -->
+            <div class="category-card">
+                <img src="{% static 'images/rose1.jpg' %}">
+                <h5>Roses</h5>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="category-card">
+                <img src="{% static 'images/tulip.jpg' %}">
+                <h5>Tulips</h5>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="category-card">
+                <img src="{% static 'images/orchid.jpg' %}">
+                <h5>Orchids</h5>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="category-card">
+                <img src="{% static 'images/bouquet.jpg' %}">
+                <h5>Bouquets</h5>
+            </div>
+
+            <!-- INDIAN MARKET BASED -->
+            <div class="category-card">
+                <img src="{% static 'images/marigold.jpg' %}">
+                <h5>Marigold</h5>
+            </div>
+
+            <div class="category-card">
+                <img src="{% static 'images/jasmine.jpg' %}">
+                <h5>Jasmine</h5>
+            </div>
+
+            <div class="category-card">
+                <img src="{% static 'images/lotus.jpg' %}">
+                <h5>Lotus</h5>
+            </div>
+
+            <div class="category-card">
+                <img src="{% static 'images/lily.jpg' %}">
+                <h5>Lilies</h5>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="bestseller-section">
+
+    <div class="container text-center">
+
+        <!-- TITLE -->
+        <h2 class="bestseller-title">
+            <span class="main">Bestsellers</span><br>
+            <span class="sub">of the week</span>
+        </h2>
+
+        <!-- CARDS -->
+        <div class="row mt-5">
+
+            <!-- ITEM 1 -->
+            <div class="col-md-4">
+                <div class="bestseller-card">
+                    <img src="{% static 'images/roses.jpg' %}">
+                    <h5>Luxury Red Roses</h5>
+                    <a href="#" class="shop-btn">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="col-md-4">
+                <div class="bestseller-card">
+                    <img src="{% static 'images/lily2.jpg' %}">
+                    <h5>White Lily Bouquet</h5>
+                    <a href="#" class="shop-btn">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="col-md-4">
+                <div class="bestseller-card">
+                    <img src="{% static 'images/tupli1.jpg' %}">
+                    <h5>Pink Tulip Delight</h5>
+                    <a href="#" class="shop-btn">Shop Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="trust-section">
+
+    <div class="container text-center">
+
+        <!-- HEADING -->
+        <p class="trust-heading">Trusted by 10,000+ happy customers 🌸</p>
+
+        <!-- FEATURES -->
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+                <div class="trust-box">
+                    <h5>Freshness Guaranteed</h5>
+                    <p>Handpicked flowers delivered within 24 hours to ensure maximum freshness.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="trust-box">
+                    <h5>Secure Payments</h5>
+                    <p>Multiple payment options with 100% secure checkout for worry-free shopping.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="trust-box">
+                    <h5>Same-Day Delivery</h5>
+                    <p>Fast delivery across major cities in India for last-minute surprises.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- REVIEW STRIP -->
+        <div class="review-strip mt-5">
+            ⭐⭐⭐⭐⭐ <span>Rated 4.9/5 by our customers • Loved across India</span>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

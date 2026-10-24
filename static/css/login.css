@@ -1,0 +1,98 @@
+/* ===== BODY ===== */
+.login-body {
+    background: linear-gradient(135deg, #f8d7da, #fff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.custom-nav {
+    background: #fff0f2;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: #b11226 !important;
+    font-size: 22px;
+}
+
+.nav-link {
+    color: #555 !important;
+}
+
+.nav-link:hover {
+    color: #b11226 !important;
+}
+
+/* ===== WRAPPER ===== */
+.login-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CARD ===== */
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 20px 50px rgba(177,18,38,0.1);
+    text-align: center;
+}
+
+/* TITLE */
+.login-title {
+    font-family: 'Playfair Display', serif;
+    color: #b11226;
+    margin-bottom: 5px;
+}
+
+/* SUBTEXT */
+.login-sub {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* INPUTS */
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #f4a6b0;
+}
+
+/* BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #b11226;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #8e0e1e;
+}
+
+/* SIGNUP TEXT */
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #b11226;
+    text-decoration: none;
+}

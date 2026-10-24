@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login | Petal Palace{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- LOGIN SECTION -->
+<section class="login-section">
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <h2 class="login-title">Welcome Back</h2>
+            <p class="login-sub">Login to your Petal Palace account</p>
+
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-outline-primary">Login</button>
+                <p class="signup-text">
+                    Already have an account?
+                    <a href="{% url 'signup' %}">Signup</a>
+                </p>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

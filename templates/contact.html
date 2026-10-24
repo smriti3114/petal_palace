@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | Petal Palace{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="contact-hero">
+    <div class="container text-center">
+        <h1>Get in Touch</h1>
+        <p>We’d love to hear from you 🌸</p>
+    </div>
+</section>
+
+<!-- CONTACT INFO -->
+<section class="contact-info">
+    <div class="container">
+        <div class="info-wrapper">
+
+            <div class="info-card">
+                <i class="bi bi-geo-alt"></i>
+                <h5>Visit Us</h5>
+                <p>123 Flower Street<br>Kolkata, India</p>
+            </div>
+
+            <div class="info-card">
+                <i class="bi bi-telephone"></i>
+                <h5>Call Us</h5>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div class="info-card">
+                <i class="bi bi-envelope"></i>
+                <h5>Email</h5>
+                <p>hello@petalpalace.com</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="contact-form-section">
+    <div class="container">
+
+        <div class="form-card">
+
+            <h3>Send Us a Message</h3>
+
+            <form>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+
+                <input type="text" placeholder="Subject" class="full-input" required>
+
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit" class="contact-btn">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

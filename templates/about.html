@@ -1,0 +1,120 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | Petal Palace{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container text-center">
+        <h1 class="about-title">Petal Palace</h1>
+        <p class="about-sub">Where Every Bloom Tells a Story</p>
+    </div>
+</section>
+
+
+<!-- STORY (UPGRADED PREMIUM) -->
+<section class="about-story-section">
+    <div class="container">
+
+        <div class="about-premium">
+
+            <!-- LEFT TEXT -->
+            <div class="about-text">
+                <span class="about-tag">ABOUT US</span>
+
+                <h2 class="section-heading">
+                    Rooted in beauty.<br>
+                    <em>Designed with intention.</em>
+                </h2>
+
+                <p>
+                    Founded with a passion for elegance and beauty, <strong>Petal Palace</strong> was created
+                    to bring the charm of fresh flowers into everyday life. We believe flowers are not just gifts,
+                    but expressions of love, celebration, and emotion.
+                </p>
+
+                <p>
+                    Every bouquet is thoughtfully curated by our florists using the freshest blooms,
+                    ensuring that each arrangement reflects sophistication and care.
+                </p>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</section>
+<br>
+
+<!-- VALUES -->
+<section class="about-values">
+    <div class="container text-center">
+
+        <h2 class="section-heading">Our Promise</h2>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="bi bi-flower2"></i>
+                    <h5>Freshness First</h5>
+                    <p>Handpicked flowers delivered at their peak beauty.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="bi bi-heart"></i>
+                    <h5>Crafted with Love</h5>
+                    <p>Every arrangement is designed with care and elegance.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="bi bi-truck"></i>
+                    <h5>Reliable Delivery</h5>
+                    <p>Fast and safe delivery across India.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EXPERIENCE STRIP -->
+<!-- <section class="about-highlight">
+    <div class="container text-center">
+
+        <h3 class="highlight-text">
+            Bringing joy to <span>10,000+</span> customers across India 🌸
+        </h3>
+
+    </div>
+</section> -->
+
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+
+        <h2>Experience the Beauty of Fresh Flowers</h2>
+        <p>Make your moments unforgettable with Petal Palace.</p>
+
+        <a href="{% url 'contact' %}" class="hero-btn">Contact Us</a>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Shop | Petal Palace{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="shop-section">
+    <div class="container">
+
+        <div class="shop-wrapper">
+
+            <!-- SIDEBAR -->
+            <div class="shop-sidebar">
+                <h4>Categories</h4>
+
+                <div id="{{cat.id}}" class="category-table">
+
+                    <div class="category-table-header">All categories</div>
+                    {% for cat in category %}
+                    <a href="{% url 'shop' %}?category={{ cat.id }}">{{ cat.cat_name }}</a>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="shop-products">
+                {% for prod in product %}
+                <div class="product-card">
+                    <img src="{{ prod.images.url }}" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h4>{{ prod.cat_name }}</h4>
+                        <h5>{{ prod.desc }}</h5>
+                        <p>₹{{ prod.price }}</p>
+                        <!-- <button class="btn btn-outline-danger btn-sm">Add to cart</button> -->
+                        <a class="btn btn-outline-danger btn-sm" href="/addtocart/{{prod.id}}">Add to cart</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
